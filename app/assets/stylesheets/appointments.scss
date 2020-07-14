@@ -9,15 +9,36 @@
   min-width:800px;
 }
 
+.month_selection{
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  height: 2em;
+  font-size: 26px;
+  padding-top: 1em;
+
+}
+
+.month_selection div{
+  margin: 10px;
+}
+
+
 .calendar_head_wrap{
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
 
 }
 .calendar_head{
-  border: 1px grey solid;
   width: 200px;
   height: 2em;
+  background-color: #22A7F0;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 1em;
+  flex-grow: 1;
 }
 
 
@@ -28,11 +49,50 @@
 
 
 .calendar_week{
-    border: 1px grey solid;
+    border-bottom: 1px grey solid;
     height: 200px;
     display:flex;
     flex-direction:row;
+    flex-grow:1;
 }
 
-.calendar_day{border:1px grey solid;
-width:200px;}
+.calendar_day{
+  text-align:right;
+  width:200px;
+  font-size: 20px;
+  padding:5px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+
+.current_month{
+}
+.current_month:hover{
+background-color: #EEEEEE
+}
+
+
+.not_current_month{
+  color: white;
+  background-color: #95A5A6;
+}
+
+.appointment{
+  background-color: #F9690E;
+  border-radius: 5px;
+  padding: 5px;
+  display:flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.appointment:hover{background-color: #CA6924;
+}
+
+.link-text-color:visited{color:white;
+}
+
+.link-text-color:hover{background-color: inherit;
+}

@@ -1,6 +1,8 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
 
+
+
   # GET /appointments
   # GET /appointments.json
   def index
@@ -14,7 +16,7 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/new
   def new
-    @appointment = Appointment.new
+    @appointment = Appointment.new(appointment_params)
   end
 
   # GET /appointments/1/edit
@@ -36,6 +38,8 @@ class AppointmentsController < ApplicationController
       end
     end
   end
+
+
 
   # PATCH/PUT /appointments/1
   # PATCH/PUT /appointments/1.json
