@@ -56,6 +56,7 @@
     flex-grow:1;
 }
 
+
 .calendar_day{
   text-align:right;
   width:200px;
@@ -64,30 +65,63 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  position: relative;
 }
 
+
+
+.calendar_day .overlay{
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  right:0;
+}
+
+.day_number{
+  z-index: 2
+}
+.appointment{
+
+    background-color: #F9690E;
+    border-radius: 5px;
+    padding: 5px;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+.calendar_day .appointment_wrapper{
+  position: relative;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.calendar_day .appointment_wrapper a{
+  pointer-events:all;
+}
 
 .current_month{
 }
-.current_month:hover{
-background-color: #EEEEEE
-}
+
 
 
 .not_current_month{
   color: white;
-  background-color: #95A5A6;
+  background-color: #6C7A89;
 }
 
-.appointment{
-  background-color: #F9690E;
-  border-radius: 5px;
-  padding: 5px;
-  display:flex;
-  justify-content: space-between;
-  margin-bottom: 2px;
+.current_day{
+  background-color: #EEEEEE;
 }
 
+.current_month:hover a{
+background-color: #EEEEEE;
+}
+
+.current_day:hover a{
+background-color: #EEEEEE;
+}
 .appointment:hover{background-color: #CA6924;
 }
 
